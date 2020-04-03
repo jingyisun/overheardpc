@@ -1,0 +1,117 @@
+*{
+  margin:0px;
+
+}
+html, body{
+  height: 100vh;
+  background-color: cyan;
+  position: relative;
+  cursor: url("../images/cursor_default.png"), auto;
+}
+@font-face {
+    font-family: 'bitregular';
+    src: url('fonts/bit-webfont.woff2') format('woff2'),
+         url('fonts/bit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#wrapper{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  /* height: auto;
+  position: relative; */
+}
+
+#text_wrapper{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:auto;
+  margin:30px 0 30px 0;
+}
+
+#text_wrapper a{
+  color:inherit;
+  text-decoration: none;
+  font-family: 'bitregular', Helvetica, sans-serif;
+  color:#1602e0;
+  font-size: 12px;
+  cursor: url("../images/cursor_pointer.png"), auto !important;
+  margin-top: 2px;
+}
+
+#grid{
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows:100px 100px 100px 100px;
+  grid-gap: 50px;
+}
+
+p{
+  font-family: 'bitregular', Helvetica, sans-serif;
+  color:#1602e0;
+}
+#title_text{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.subtitle_text{
+  font-size: 12px;
+}
+#note_wrapper{
+  position: absolute;
+}
+
+#note_arrow{
+position: absolute !important;
+right:275px;
+bottom:150px;
+}
+
+#note_text{
+  position:absolute;
+  right:330px;
+  bottom:75px;
+}
+
+.pointer{
+  cursor: url("../images/cursor_pointer.png"), auto !important;
+}
+.not_allowed{
+  cursor:url("../images/cursor_not_allowed.png"), auto !important;
+}
+.computer{
+  width:100px;
+  height:100px;
+}
+
+.cloud_ani{
+  height:200px;
+  position: absolute;
+  top: 15px;
+  animation:spinning 50s infinite linear alternate;
+  transform:rotate(360deg);
+  transform-origin: center;
+
+}
+
+@keyframes spinning {
+  0% {
+    transform:translate(0,0) rotate(0deg) ;
+  }
+  25%{
+    transform:translate(calc(100vw/2 - 100px),calc(100vh - 150px)) rotate(90deg);
+  }
+  50%{
+      transform:translate(calc(100vw - 200px),calc(100vh/2 - 75px)) rotate(180deg);
+  }
+  75% {
+     transform:translate(calc(100vw/2 - 100px),0px) rotate(270deg);
+  }
+  100%{
+    transform:translate(0,calc(100vh - 200px)) rotate(360deg);
+  }
+}
